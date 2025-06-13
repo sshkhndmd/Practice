@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Платформа</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const questions = document.querySelectorAll('.faq__question');
+    const answerBox = document.querySelector('.faq__answer');
+    const title = answerBox.querySelector('h3');
+    const lines = answerBox.querySelector('.faq__lines');
+    const answerText = answerBox.querySelectorAll('p');
+
+    const answers = [
+      {
+        title: 'Что нужно, чтобы начать работу с future technologies company (ftc)?',
+        text: [
+          'Для начала работы необходимо пройти регистрацию на официальном сайте компании и пополнить баланс личного кабинета.',
+          'Затем вы можете выбрать инвестиционный план и начать зарабатывать.'
+        ]
+      },
+      {
+        title: 'Могу ли я не заработать, инвестируя с future technologies company (ftc)?',
+        text: [
+          'Компания гарантирует стабильную доходность в рамках выбранного плана.',
+          'Однако, как и в любом инвестиционном проекте, существует определённый уровень риска.'
+        ]
+      },
+      {
+        title: 'Какая минимальная и максимальная сумма депозита?',
+        text: [
+          'Минимальный размер депозита – <span class="highlight">100 рублей</span>.',
+          'Максимальный размер депозита – <span class="highlight">80 000 000 рублей</span>.'
+        ]
+      }
+    ];
+
+    questions.forEach((question, index) => {
+      question.addEventListener('click', () => {
+        questions.forEach(q => q.classList.remove('active'));
+        question.classList.add('active');
+
+        title.innerHTML = answers[index].title;
+        answerText[0].innerHTML = answers[index].text[0];
+        answerText[1].innerHTML = answers[index].text[1];
+      });
+    });
+  });
+</script>
+
+<body>
+  <header class="banner">
+    <div class="banner__left">
+      <a href="#" class="banner__cta">
+        <span class="banner__text">Начать <br>зарабатывать</span>
+        <span class="banner__arrow">→</span>
+      </a>
+    </div>
+
+    <div class="banner__right">
+      <img src="img/banner.svg" alt="banner background" class="banner__bg" />
+
+      <nav class="banner__nav">
+        <div class="nav__menu">
+          <ul>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Инвестору</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">F.A.Q</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="nav__auth">
+          <a href="#" class="banner__login">Вход/Регистрация</a>
+        </div>
+      </nav>
+      <div class="banner__content">
+        <h1>Сегодня рынок <br>IT-технологий измеряется <br>уже триллионами долларов</h1>
+        <p>Мы знаем как заработать свою долю прибыли. <br>Регистрируйтесь на нашей платформе и начинайте <br>
+          зарабатывать с
+          нами</p>
+        <a href="#" class="banner__btn">Калькулятор прибыли</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="second-section">
+      <div class="container">
+        <div class="second-section__top">
+          <div class="second-section__left">
+            <div class="second-section__left-top">
+              <div class="second-section__label">Как мы <br>работаем</div>
+              <img src="img/second1.svg" alt="image 1" class="img1">
+            </div>
+            <img src="img/second2.svg" alt="image 2" class="img2">
+          </div>
+          <div class="second-section__right">
+            <h2>Как мы работаем<br>и на чём зарабатываем</h2>
+            <p>
+              Команда, у которой за плечами не менее 12 лет работы на разных позициях в сегменте инвестиционного бизнеса
+              – от аудитора и аналитика отдела рисков до финансового директора инвестиционного банка.
+            </p>
+            <p>
+              Формируя динамичный инвестиционный портфель, мы ежедневно применяем накопленный опыт в разных
+              направлениях, и делаем упор на стартапы в сферах:
+            </p>
+            <a href="#" class="button">Регистрация</a>
+          </div>
+        </div>
+
+        <div class="second-section__cards">
+          <div class="card">
+            <div class="card__title-row">
+              <img src="img/icon1.svg" alt="Иконка">
+              <img src="img/gray-line.svg" alt="Линия">
+              <h3>Блокчейн и криптовалюта</h3>
+            </div>
+            <p>
+              Сегодня IT-проекты в этой сфере в центре внимания инвесторов всего мира. Но эти технологии интересуют нас
+              не только сами по себе, мы рассматриваем перспективы их внедрения в e-commerce и в развитие маркетплейсов.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card__title-row">
+              <img src="img/icon1.svg" alt="Иконка">
+              <img src="img/gray-line.svg" alt="Линия">
+              <h3>Искусственный интеллект<br>в сфере беттинга</h3>
+            </div>
+            <p>
+              Запатентованный инфопродукт собственного производства на основе искусственного интеллекта служит
+              инструментом получения стабильного дохода в сфере беттинга.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card__title-row">
+              <img src="img/icon1.svg" alt="Иконка">
+              <img src="img/gray-line.svg" alt="Линия">
+              <h3>Блокчейн и криптовалюта</h3>
+            </div>
+
+            <p>
+              Некоторые инвесторы уже разуверились в этих сферах, но технология виртуальной реальности «воскресила» эти
+              отрасли и превратила «Old School» в «New Sexy».
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="steps-section">
+      <div class="steps-section__container">
+        <div class="steps-section__image">
+          <img src="img/step.svg" alt="Скрин" />
+        </div>
+        <div class="steps-section__center">
+          <h2>Инвестировать<br>с нами надёжно и выгодно</h2>
+          <div class="underline"></div>
+          <button class="cta-button">Начать зарабатывать</button>
+        </div>
+        <div class="steps-section__right">
+          <div class="steps">
+            <div class="step">
+              <div class="step__number">1</div>
+              <div class="step__text">
+                <h3>Регистрация на сайте</h3>
+                <p>Пройдите процедуру регистрации на сайте для открытия счёта. Нажмите кнопку «Регистрация» и заполните
+                  все необходимые поля.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__number active">2</div>
+              <div class="step__text">
+                <h3>Открывайте депозит</h3>
+                <p>Сделайте инвестицию на удобный срок на сумму от 100 рублей и ваши деньги начнут работать на вас.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__number">3</div>
+              <div class="step__text">
+                <h3>Распоряжайтесь прибылью</h3>
+                <p>По факту окончания периода инвестиции вклад с прибылью будут доступны для вывода или создания нового
+                  депозита.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container faq__container">
+        <h2 class="faq__title">Часто задаваемые вопросы</h2>
+        <div class="faq__content">
+          <div class="faq__questions">
+            <div class="faq__question active">
+              <span class="faq__icon">?</span>
+              <span class="faq__text">Что нужно, чтобы начать работу с future technologies company (ftc)?</span>
+              <img class="vector" src="img/vector.svg" alt="vector">
+            </div>
+            <div class="faq__question">
+              <span class="faq__icon">?</span>
+              <span class="faq__text">Могу ли я не заработать, инвестируя с future technologies company (ftc)?</span>
+              <img class="vector" src="img/vector.svg" alt="vector">
+            </div>
+            <div class="faq__question">
+              <span class="faq__icon">?</span>
+              <span class="faq__text">Какая минимальная и максимальная сумма депозита?</span>
+              <img class="vector" src="img/vector.svg" alt="vector">
+            </div>
+          </div>
+          <div class="faq__answer">
+            <h3>Какая минимальная <br>и максимальная сумма <br>депозита?</h3>
+            <div class="faq__lines">
+              <p>Минимальный размер депозита – <span class="highlight">100 рублей</span>.</p>
+              <p>Максимальный размер депозита – <span class="highlight">80 000 000 рублей</span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="container">
+        <h2 class="stats__title">Статистика компании</h2>
+        <div class="stats__items">
+          <div class="stats__item">
+            <div class="stats__value">932</div>
+            <div class="stats__label">Работаем (дней)</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__value">960696</div>
+            <div class="stats__label">Всего инвесторов</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__value">67</div>
+            <div class="stats__label">Новых за 24 часа</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__value">109500<span>р.</span></div>
+            <div class="stats__label">Среднее пополнение</div>
+          </div>
+        </div>
+        <div class="stats__buttons">
+          <a href="#" class="btn btn--primary">Присоединиться к нам</a>
+          <a href="#" class="btn btn--outline">Калькулятор прибыли</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__block footer__about">
+          <p>
+            Команда, у которой за плечами<br>
+            не менее 12 лет работы на разных<br>
+            позициях в сегменте инвестиционного<br>
+            бизнеса – от аудитора и аналитика<br>
+            отдела рисков до финансового<br>
+            директора инвестиционного банка.
+          </p>
+        </div>
+        <div class="footer__block footer__nav">
+          <h4>Навигация</h4>
+          <hr>
+          <div class="footer__links">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Отзывы о компании</a></li>
+              <li><a href="#">Как мы зарабатываем?</a></li>
+              <li><a href="#">Клиентское соглашение</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Документы компании</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">F.A.Q.</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__block footer__contacts">
+          <h4>Контакты</h4>
+          <hr>
+          <p>+7 (499)-229-33-33</p>
+          <p><a href="mailto:info@ftc.vin"><strong>info@ftc.vin</strong></a></p>
+          <p><strong>ПН - ПТ:</strong> 10:00 – 20:00 по МСК</p>
+          <p><strong>СБ – ВС:</strong> свободный график</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
